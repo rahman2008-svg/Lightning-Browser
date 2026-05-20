@@ -1,0 +1,12 @@
+workflows:
+  android:
+    name: Browser Build
+
+    environment:
+      flutter: stable
+
+    scripts:
+      - ./gradlew assembleRelease
+
+    artifacts:
+      - app/build/outputs/**/*.apk
